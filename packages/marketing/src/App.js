@@ -6,6 +6,7 @@ import Landing from './components/landing';
 import Pricing from './components/pricing';  
 
 export default () =>{
+    
     return <div>
         <StylesProvider>
             <BrowserRouter>
