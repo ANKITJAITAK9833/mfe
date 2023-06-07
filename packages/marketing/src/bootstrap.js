@@ -13,11 +13,11 @@ const mount  = (el)  => {
 // If we are in development and in isolation, 
 // call the mount function immediately.
 if( process.env.NODE_ENV === 'development' ) {
-    const devRoot = document.querySelector('#_marketing-dev-root');
+     const devRoot = document.querySelector('#_marketing-dev-root');
 
-    if(devRoot) {
+     if(devRoot) {
         mount(devRoot);
-    }
+     }
 }
 
 // We are running through container
