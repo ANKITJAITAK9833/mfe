@@ -11,7 +11,7 @@ const mount  = (el)  => {
 };
 
 // If we are in development and in isolation, 
-// call mount immediately
+// call mount function immediately
 if(process.env.NODE_ENV === 'development') {
     const devRoot = document.querySelector('#_marketing-dev-root');
 
