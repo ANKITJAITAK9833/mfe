@@ -7,7 +7,7 @@ import {createMemoryHistory, createBrowserHistory} from 'history'; //Note: here 
 
 
 // Mount function to start ut the app
-const mount  = (el, {onNavigate, defaultHistory, initialPath})  => {
+const mount  = (el, {onNavigate, defaultHistory , initialPath})  => {
  
     const history =  defaultHistory ||  createMemoryHistory({
         initialEntries : [initialPath]
@@ -37,7 +37,7 @@ const mount  = (el, {onNavigate, defaultHistory, initialPath})  => {
 // If we are in development and in isolation, 
 // call the mount function immediately.
 if( process.env.NODE_ENV === 'development' ) {
-     const devRoot = document.querySelector('#_marketing-dev-root');
+     const devRoot = document.querySelector('#auth-dev-root');
 
      if(devRoot) {
 
