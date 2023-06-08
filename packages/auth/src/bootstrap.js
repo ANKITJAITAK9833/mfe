@@ -7,7 +7,7 @@ import {createMemoryHistory, createBrowserHistory} from 'history'; //Note: here 
 
 
 // Mount function to start ut the app
-const mount  = (el, {onNavigate, defaultHistory , initialPath})  => {
+const mount  = (el, {onSignIn,onNavigate, defaultHistory , initialPath})  => {
  
     const history =  defaultHistory ||  createMemoryHistory({
         initialEntries : [initialPath] //  initialPath is provided so that none of the sub apps take initial path as / but the inital path provided
@@ -19,7 +19,7 @@ const mount  = (el, {onNavigate, defaultHistory , initialPath})  => {
 
 
     ReactDOM.render(
-        <App history={history} />,
+        <App onSignIn={onSignIn} history={history} />,
         el
     );
 
