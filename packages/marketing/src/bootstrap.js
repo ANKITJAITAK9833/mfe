@@ -10,7 +10,7 @@ import {createMemoryHistory, createBrowserHistory} from 'history'; //Note: here 
 const mount  = (el, {onNavigate, defaultHistory, initialPath})  => {
  
     const history =  defaultHistory ||  createMemoryHistory({
-        initialEntries : [initialPath]
+        initialEntries : [initialPath] // initialPath is provided so that none of the sub apps take initial path as / but the inital path provided
     }); // if defualtHistory is present use it else create MemoryHistory
 
     if(onNavigate){

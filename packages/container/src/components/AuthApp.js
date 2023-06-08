@@ -8,7 +8,7 @@ export default () => {
     const history = useHistory();
     useEffect(() => {
      const {onParentNavigate} =  mount(ref.current, {
-        initialPath :  history.location.pathname,
+        initialPath :  history.location.pathname, // passing the initial Path down to sub app so that sub app doesn't take / as initial path that may cause some trouble
         onNavigate : ({pathname : nextPathName}) => {
             console.log('The container noticed navigation in Marketing',nextPathName);
             const {pathname} =  history.location;
